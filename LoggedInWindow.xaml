@@ -1,0 +1,55 @@
+﻿<Window x:Class="AntrojiProgramavimoPraktika.LoggedInWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AntrojiProgramavimoPraktika"
+        mc:Ignorable="d"
+        Title="LoggedInWindow" Height="600" Width="1000"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                            Background="#FFD2D7D8" 
+                            BorderBrush="white" 
+                            BorderThickness="1" 
+                            CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FFB0C4DE"/>
+                                
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Viewbox VerticalAlignment="Top" Stretch="Fill">
+        <Grid Height="435">
+
+            <Rectangle HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="800" Stroke="#FF1EB2E4" Fill="#FF1161A6"/>
+            <Image Source="Assets/VIKOlogo.jpg" Stretch="Fill" HorizontalAlignment="Center" Height="96" VerticalAlignment="Top" Width="100" Margin="0,2,0,0"/>
+            <Button x:Name="disBtn" Content="Atsijungti" HorizontalAlignment="Left" Margin="699,34,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.833,0.202" Height="36" Width="71" Click="disBtn_Click" FontWeight="Bold"/>
+            <Button x:Name="mainMenuBtn" Content="Pagrindinis meniu" HorizontalAlignment="Left" Margin="25,34,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.833,0.202" Height="36" Width="133" Click="mainMenuBtn_Click" FontWeight="Bold"/>
+            <Button x:Name="kontaktDuomBtn" Visibility="Hidden" Content="Kontaktiniai duomenys" HorizontalAlignment="Left" Margin="522,34,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.833,0.202" Height="36" Width="160" Click="kontaktDuomBtn_click" FontWeight="Bold"/>
+            <Button Name="fSemBtn" Content="1 Semestras" HorizontalAlignment="Center" VerticalAlignment="Top" Width="352" Margin="0,178,0,0" Click="fSemBtn_Click"/>
+            <Button Name="sSemBtn" Content="2 Semestras" HorizontalAlignment="Center" VerticalAlignment="Top" Width="352" Margin="0,244,0,0" Click="sSemBtn_Click"/>
+            <Button Name="tSemBtn"  Content="3 Semestras" HorizontalAlignment="Center" VerticalAlignment="Top" Width="352" Margin="0,310,0,0" Click="tSemBtn_Click"/>
+            <Button Name="AdminBtn" Content="Admin" HorizontalAlignment="Left" Margin="194,30,0,0" Visibility="Hidden" VerticalAlignment="Top" Click="AdminButton_Click" FontWeight="Bold"/>
+            <Button Name="TeacherBtn" Content="Įrašyti pažymį" HorizontalAlignment="Left" Margin="194,30,0,0" Visibility="Hidden" VerticalAlignment="Top" Click="TeacherButton_Click" FontWeight="Bold"/>
+
+
+        </Grid>
+    </Viewbox>
+</Window>
